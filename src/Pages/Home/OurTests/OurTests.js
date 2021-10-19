@@ -17,7 +17,7 @@ const OurTests = () => {
                 <li>Fee only 2500tk</li>
             </ul>
           </Card.Text>
-          <Button variant="primary">Test Today</Button>
+          <Button variant="primary">Book Test</Button>
         </Card.Body>
       </Card>
     </Col>
@@ -32,7 +32,7 @@ const OurTests = () => {
                 <li>Fee only 500tk</li>
             </ul>
           </Card.Text>
-          <Button variant="primary">Test Today</Button>
+          <Button variant="primary">Book Test</Button>
         </Card.Body>
       </Card>
     </Col>

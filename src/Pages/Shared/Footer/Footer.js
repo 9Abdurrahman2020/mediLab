@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './footer.css'
 const Footer = () => {
     return (
-        <div className="text-center bg-black text-white p-3">
+        <div className="text-center bg-black mt-5 text-white p-3">
             <div className="social-icon">
                 <i className="fab fa-youtube"></i>
                 <i className="fab fa-facebook"></i>
