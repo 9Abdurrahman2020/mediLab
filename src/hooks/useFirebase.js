@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../firebase/firebase.init";
-import { getAuth, signInWithPopup, onAuthStateChanged, GoogleAuthProvider, signOut, GithubAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, onAuthStateChanged, GoogleAuthProvider, signOut, GithubAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 
 initializeAuthentication();
@@ -39,6 +39,29 @@ const registerUser = () =>{
     else{
         setError('')
         createUserWithEmailAndPassword(auth, email, pass)
+    .then( result =>{
+        setUser(result.user)
+        history.push(redirect_url)
+    })
+    .catch(error =>{
+        setError(error.message)
+    })
+    }
+}
+
+const loginUsingEmailPass = () =>{
+
+    const regex = /^\S+@\S+\.\S+$/;
+
+    if(!regex.test(email)){
+        return setError('Please try again with a valid email');
+    }
+    else if(pass.length < 6){
+        return setError('Please put a password bigger then 5 character');
+    }
+    else{
+        setError('')
+        signInWithEmailAndPassword(auth, email, pass)
     .then( result =>{
         setUser(result.user)
         history.push(redirect_url)
@@ -107,7 +130,8 @@ return {
     registerUser,
     setLocation,
     setHistory,
-    isLoading
+    isLoading,
+    loginUsingEmailPass
 }
 }
 export default useFirebase;

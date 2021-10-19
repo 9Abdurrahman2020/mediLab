@@ -31,7 +31,7 @@ const Contact = () => {
             <FormControl as="textarea" placeholder="Write your message" aria-label="With textarea" />
         </InputGroup>
        </div>
-       <button className="btn btn-danger mx-auto" style={{width:'100%'}}>Send Message</button>
+       <button className="btn btn-danger mx-auto my-3" style={{width:'100%'}}>Send Message</button>
       </div>
         </div>
     );

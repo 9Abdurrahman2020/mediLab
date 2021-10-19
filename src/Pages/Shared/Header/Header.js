@@ -7,11 +7,13 @@ const Header = () => {
     const {user, logOut} = useAuth()
     return (
         <div>
-        <Navbar bg="dark" variant="dark" expand="lg">
-            <Navbar.Brand href="#">MediLab</Navbar.Brand>
+        <Navbar bg="light" variant="light" expand="lg">
+            <Navbar.Brand>
+                <img className="our-logo" src="https://www.medilabbd.com/images/Logo.png" alt="" />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
-                <Nav className="ms-auto my-2 my-lg-0 nav-link">
+                <Nav className="ms-auto my-2 my-lg-0 nav-link text-center">
                     <Link to="/">Home</Link>
                     <Link to="/all-doctors">Doctors</Link>
                     <Link to="/contact">Contact</Link>
