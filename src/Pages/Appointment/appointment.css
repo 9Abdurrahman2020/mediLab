@@ -1,0 +1,19 @@
+.booking-container{
+    height: 100vh;
+}
+.booking-container input{
+    width: 100%;
+}
+.book-btn{
+    width: 150px;
+    background-color: rgb(243, 115, 11);
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    margin: 20px auto;
+    display: block;
+}
+.book-btn:hover{
+    background-color: rgb(241, 64, 0);
+    color: white;
+}

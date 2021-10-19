@@ -1,0 +1,13 @@
+.nav-link a{
+     margin-right: 10px;
+     text-decoration: none;
+     color: rgb(255, 255, 255);
+     padding: 5px 10px;
+}
+.nav-link a:hover{
+     background-color: rgb(245, 239, 239);
+     color: rgb(15, 15, 15);
+}
+.fa-user{
+     margin-right: 5px;
+}
