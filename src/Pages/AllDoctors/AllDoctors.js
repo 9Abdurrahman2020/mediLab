@@ -8,7 +8,7 @@ const AllDoctors = () => {
     const {doctors} = useAuth();
     useEffect( ()=>{     
     setData(doctors);
-    },[])
+    },[doctors])
     const doctorToggleHandler = gender =>{
         if(gender == 'alldoctors'){
             setData(doctors)
