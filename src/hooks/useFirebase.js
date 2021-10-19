@@ -19,7 +19,7 @@ const auth = getAuth();
 const googleProvider = new GoogleAuthProvider();
 const githubPrivider = new GithubAuthProvider();
 
-const redirect_url = location.state?.from || '/';
+const redirect_url = location.state?.from || '/' ;
 
 useEffect( ()=>{
     fetch('/data/doctorsData.json')
@@ -39,9 +39,9 @@ const registerUser = () =>{
     else{
         setError('')
         createUserWithEmailAndPassword(auth, email, pass)
-    .then( result =>{
-        setUser(result.user)
-        history.push(redirect_url)
+    .then( () =>{
+        setError('Successfully registered, You can login now !')
+        signOut(auth)
     })
     .catch(error =>{
         setError(error.message)
